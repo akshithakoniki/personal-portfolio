@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <style>
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .navbar a:hover {
+            color: blue;
+        }
+
+        .image img {
+            margin-top: 50px;
+            height: 500px;
+            width: 100%;
+        }
+
+        .navbar h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .img-data {
+            position: absolute;
+            top: 200px;
+            left: 750px;
+        }
+
+        .div-1 {
+            width: 350px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: 1s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const reveals = document.querySelectorAll(".reveal");
+            const screenHeight = window.innerHeight;
+
+            reveals.forEach(function (element) {
+                const elementTop = element.getBoundingClientRect().top;
+
+                if (elementTop < screenHeight - 100) {
+                    element.classList.add("show");
+                } else {
+                    element.classList.remove("show");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar bg-dark p-3">
+        <a href="" class="fs-4">MY PORTFOLIO</a>
+        <a href="index.html">HOME PAGE</a>
+        <a href="acdamics.html">ACADAMICS</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="internships.html">INTERNSHIPS</a>
+        <a href="">CONTACT ME</a>
+    </nav>
+    <div class="image">
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8b2ZmaWNlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D"
+            alt="">
+        <div class="img-data bg-white text-center p-3">
+            <h3>NAGA SRI VALLI AKSHITHA KONIKI</h3>
+            <p>Fresher</p>
+            <p>QIS COLLEGE OF ENGINEERING AND TECHNOLOGY</p>
+            <p>Skills: Java,Html,Css,JavaSCript,Sql,Bootsrap</p>
+            <a href="KonikinagasrivalliAkshitha_Resume.pdf" class=" text-decoration-none">Download my Resume</a>
+        </div>
+    </div>
+    <div class="div-grp d-flex mt-5 fs-4 text-center gap-3">
+        <div class="bg-dark-subtle div-1 reveal">
+            <i class="bi bi-patch-check text-dark fs-1"></i>
+            <p>Acadamics</p>
+            <p class="fs-6 p-2">List all of the courses i have taken, my study aborad expreience, and some examples of
+                assignments i have donr in college.</p>
+            <br>
+            <a href="acdamics.html" class=" text-dark fs-6">Read more >></a>
+        </div>
+        <div class="bg-body-secondary div-1 reveal">
+            <i class="bi bi-card-text fs-1"></i>
+            <p>Projects</p>
+            <p class="fs-6 p-2">Display some of my projects. Talks about my Past collage projects, activities and my
+                practice pages. Also, goes oer what i have leaned from them.</p>
+            <br>
+            <a href="projects.html" class=" text-black fs-6">Read more >></a>
+        </div>
+        <div class="bg-dark-subtle div-1 reveal">
+            <i class="bi bi-briefcase-fill fs-1"></i>
+            <p>Internships</p>
+            <p class="fs-6 p-2">List of my Experience which includes Internships i have done and I'm still fresher.
+                Talks about my tasks, my challanges, and what i learned.</p>
+            <br>
+            <a href="internships.html" class=" text-black fs-6">Read more >></a>
+        </div>
+        <div class="bg-body-tertiary div-1 reveal">
+            <i class="bi bi-person-lines-fill fs-1"></i>
+            <p>Contact Me</p>
+            <p class="fs-6 p-2">You can reach me via email, phone, LinkedIn, GitHub, or portfolio website or visit my
+                website to learn more about my work and projects.</p>
+            <br>
+            <a href="" class=" text-black fs-6">Read more >></a>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="footer text-center">
+        <p>Contact me</p>
+        <p>phno: 9014629400</p>
+        <p>Email: akshithakoniki74@gmail.com</p>
+        <p>linkdin: <a href="">https://www.linkedin.com/in/koniki-naga-srivalli-akshitha-8826a5284/</a></p>
+    </div>
+</body>
+
+</html>

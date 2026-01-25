@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <style>
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .navbar a:hover {
+            color: blue;
+        }
+
+        .div1-content {
+            margin-top: -330px;
+            margin-left: 670px;
+        }
+
+        .pro-img img {
+            margin-top: -550px;
+            margin-left: 700px;
+            width: 500px;
+            height: 400px;
+        }
+        .content2{
+            margin-top: -380px;
+            margin-left: 650px;
+        }
+        .pro3-img img{
+            margin-top: -500px;
+            margin-left: 630px;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: 1s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        window.addEventListener("scroll", function () {
+            const reveals = document.querySelectorAll(".reveal");
+            const screenHeight = window.innerHeight;
+
+            reveals.forEach(function (element) {
+                const elementTop = element.getBoundingClientRect().top;
+
+                if (elementTop < screenHeight - 100) {
+                    element.classList.add("show");
+                } else {
+                    element.classList.remove("show");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar bg-dark p-3">
+        <h4 class="text-white">AKSHITHA KONIKI</h4>
+        <a href="index.html">HOME PAGE</a>
+        <a href="acdamics.html">ACADAMICS</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="internships.html">INTERNSHIPS</a>
+        <a href="">CONTACT ME</a>
+    </nav>
+    <p class="text-center fs-1 mt-3">P R O J E C T S</p>
+    <div class="project-intro">
+        <div class="div1-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkuw6YFM1gPain97ACK2j9GO2PDJSJFJmQHg&s"
+                alt="" class="w-50 pt-4">
+        </div>
+        <div class="div1-content">
+            <h3>D i s c o v e r</h3>
+            <p>
+                On the projects page, you will discover a collection of academic,
+                internship, and personal projects that showcase my technical expertise,
+                problem-solving abilities, and practical implementation skills.
+            </p>
+            <button class="text-center btn bg-warning">View More</button>
+        </div>
+    </div>
+    <div class="pro1-content w-50 reveal" style="padding-left: 20px;">
+        <h3 style="margin-top: 200px; padding-bottom: 20px;">Plant Disease Detection Organic Fertilizer Recomendation
+            System</h3>
+        <p>Duration: May 2024 – October 2024</p>
+        <p>My Role:worked in the front end part and Documentation</p>
+        <p>Technologies used: Python, Machine Learning, CNN, OpenCV, TensorFlow, Flask, HTML, CSS.</p>
+        <p>This project focuses on identifying plant diseases at an early stage using image processing and machine
+            learning techniques.
+            The system analyzes images of plant leaves to detect visible disease symptoms accurately and classifies the
+            type of disease affecting the plant.
+            Early detection helps farmers reduce crop loss and improve agricultural productivity.Based on the detected
+            disease and crop type, the system recommends suitable organic fertilizers and eco-friendly treatment
+            methods.
+            These recommendations aim to improve soil health, reduce chemical dependency, and promote sustainable
+            farming practices. The project integrates technology with agriculture to support smart decision-making,
+            enhance crop yield, and encourage environmentally responsible farming.
+        </p>
+        <div class="pro-img">
+            <img src="https://cdn3.saiwa.ai/Blog/plant_disease_detection_using_image_processing_featured_image_5cbddca5_a831_4b39_b9c8_e9b02a914f4c_9818cf5400.jpg"
+                alt="">
+        </div>
+    </div>
+    <div class="pro2-content reveal">
+        <div class="pro2-img" style="margin-top: 100px; margin-left: 10px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQipMPOA2lD3d2P5--csBEZnqR3bfSjRdT8PQ&s"
+                alt="" class="w-50">
+        </div>
+        <div class="content2 w-40">
+            <h3 style="margin-top: -100px; text-align: center; padding-bottom: 20px;">Fake Currency Detection</h3>
+            <p>Duration: November 2024 – April 2025</p>
+            <p>My Role: worked in the front end part and Documentation</p>
+            <p>Technologies used:  Python, Machine Learning, CNN, OpenCV, TensorFlow, Flask, HTML, CSS.</p>
+            <p>This project aims to detect counterfeit currency notes using machine learning and image processing techniques.
+                The system analyzes key visual features of currency notes such as texture, color patterns, security marks,
+                and watermark regions to distinguish between genuine and fake notes with high accuracy.
+                Images of currency notes are preprocessed to enhance quality and extract important features.
+                A machine learning model is trained on these features to classify the currency as real or counterfeit. 
+                The system helps in preventing financial fraud, reduces manual verification effort,
+                and provides a fast, reliable, and automated solution for currency authentication.
+            </p>
+        </div>
+    </div>
+    <div class="project3 reveal">
+        <div class="pro3-content w-50" style="padding-left: 20px; margin-top: 100px;">
+            <h3 class="text-center pb-4">Stachi Art Web Page</h3>
+            <p>Duration: practice project</p>
+            <p>My Role: Own project</p>
+            <p>Technologies used: Html, Css, Js, Bootstarp</p>
+            <p>Satachi Art is a responsive web-based art marketplace that allows users to explore, 
+                buy, and sell art paintings through an interactive and user-friendly interface.
+                The platform enables users to browse art collections, add paintings to the cart, 
+                remove or delete items, and manage their selections through a dedicated cart page.
+                The application is built using HTML, CSS, JavaScript, and Bootstrap to ensure smooth 
+                navigation, responsive design, and dynamic user interactions.
+                 Core functionalities such as adding to cart, removing items, 
+                 and real-time cart updates are implemented using JavaScript, providing an intuitive shopping experience. 
+                 This project demonstrates strong front-end development skills and practical understanding of e-commerce workflows.
+            </p>
+        </div>
+        <div class="pro3-img">
+            <img src="https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=1000" alt="" class="w-50">
+        </div>
+    </div>
+</body>
+
+</html>

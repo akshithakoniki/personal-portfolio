@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <style>
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .navbar a:hover {
+            color: blue;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: 1s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        window.addEventListener("scroll", function () {
+            const reveals = document.querySelectorAll(".reveal");
+            const screenHeight = window.innerHeight;
+
+            reveals.forEach(function (element) {
+                const elementTop = element.getBoundingClientRect().top;
+
+                if (elementTop < screenHeight - 100) {
+                    element.classList.add("show");
+                } else {
+                    element.classList.remove("show");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar bg-dark p-3">
+        <a href="" class="fs-4">MY PORTFOLIO</a>
+        <a href="index.html">HOME PAGE</a>
+        <a href="acdamics.html">ACADAMICS</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="internships.html">INTERNSHIPS</a>
+        <a href="">CONTACT ME</a>
+    </nav>
+    <div class="internship1 bg-dark-subtle p-5">
+        <h4>Aws Cloud Virtual Internship</h4>
+        <p>Duration: Sep-Nov 2023</p>
+        <p>I successfully completed the AWS Cloud Virtual Internship, where I gained hands-on experience with core cloud
+            computing concepts using Amazon Web Services. During this internship, I learned about cloud fundamentals,
+            AWS global infrastructure, and key services such as EC2, S3, IAM, VPC, and RDS. I worked on deploying
+            virtual servers, managing storage, setting access permissions, and understanding basic networking and
+            security practices in the cloud.</p>
+        <p><b>Outcomes & Learnings</b></p>
+        <p>Strong understanding of cloud computing and AWS architecture</p>
+        <p>Practical experience in launching and managing EC2 instances</p>
+        <p>Knowledge of cloud storage using Amazon S3</p>
+        <p>Basics of IAM for user roles, policies, and security</p>
+        <p>Exposure to scalable, cost-effective, and reliable cloud solutions</p>
+        <p>Improved problem-solving and real-world cloud deployment skills</p>
+        <p>This internship enhanced my technical skills and gave me confidence to work with cloud-based applications
+            and infrastructure, preparing me for entry-level cloud and IT roles.</p>
+    </div>
+    <div class="internship2 bg-body-tertiary p-5 reveal">
+        <h4>Palo Alto CyberSecurity Virtual Internship</h4>
+        <p>Duration: Jan - Mar 2024</p>
+        <p>I successfully completed the Palo Alto Cybersecurity Virtual Internship,
+            where I gained practical exposure to core cybersecurity concepts
+            and real-world security challenges. This internship helped me understand
+            how modern organizations protect networks, systems, and data from
+            cyber threats using industry-standard security practices and tools.
+        </p>
+        <p><b>What I Learned & Outcomes</b></p>
+        <p>Fundamentals of cybersecurity and threat landscape</p>
+        <p>Network security concepts including firewalls and intrusion prevention</p>
+        <p>Basics of Palo Alto Networks security solutions</p>
+        <p>Understanding of malware, phishing, and cyber attacks</p>
+        <p>Security policies, access control, and risk management</p>
+        <p>Awareness of incident response and cyber defense strategies</p>
+        <p>This internship strengthened my knowledge of cybersecurity fundamentals and improved my ability to identify,
+            analyze, and mitigate security risks, preparing me for entry-level roles in cybersecurity and IT security
+            domains.
+        </p>
+    </div>
+    <div class="internship3 bg-dark-subtle p-5 reveal">
+        <h4>Google Ai-Ml Virtual Internship</h4>
+        <p>Duration: July - Sep 2024</p>
+        <p>I successfully completed the Google AI-ML Virtual Internship,
+            where I gained foundational and practical knowledge in Artificial Intelligence
+            and Machine Learning using industry-relevant tools and methodologies.
+            This internship helped me understand how AI-driven systems are designed,
+            trained, and deployed to solve real-world problems.
+        </p>
+        <p><b>What I Learned & Outcomes</b></p>
+        <p>Fundamentals of Artificial Intelligence and Machine Learning</p>
+        <p>Data preprocessing, feature extraction, and model training</p>
+        <p>Supervised and unsupervised learning concepts</p>
+        <p>Basics of neural networks and deep learning</p>
+        <p>Model evaluation, optimization, and performance metrics</p>
+        <p>Ethical considerations and responsible use of AI</p>
+        <p>This internship enhanced my analytical thinking and practical ML skills, enabling me to understand end-to-end
+        AI-ML workflows and preparing me for roles in data science, machine learning, and AI-based application
+        development.
+    </div>
+</body>
+
+</html>
